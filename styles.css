@@ -1,0 +1,155 @@
+/* General Reset */
+body,
+h1,
+h2
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #228b22; /* Forest Green background */
+  color: #ffffff; /* White text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main App Container */
+.app {
+  text-align: center;
+  background-color: #ffffff; /* White background for contrast */
+  color: #333; /* Dark text color inside */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for depth */
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  border: 3px solid #228b22; /* Border to match theme */
+}
+
+/* Title */
+h1 {
+  font-size: 2rem;
+  color: #228b22; /* Green title to match the theme */
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+}
+
+/* Quiz Container */
+.quiz {
+  padding: 15px;
+}
+
+/* Question Text */
+#question {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #333; /* Dark text for better readability */
+}
+
+/* Answer Buttons */
+#answer-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: transparent; /* Forest Green buttons */
+  color: black; /* White text */
+  border: 1px solid black;
+  border-radius: 8px; /* Slightly rounded buttons */
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  transform: scale(1.05); /* Slight zoom-in */
+}
+
+/* Button Active Effect */
+.btn:active {
+  background-color: #185c18; /* Even darker green */
+}
+
+/* Next Button */
+#next-btn {
+  background-color: #228b22; /* Match green theme */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  border: none;
+  
+}
+
+/* Next Button Hover */
+#next-btn:hover {
+  background-color: #1e7a1e; /* Slightly darker green */
+  transform: scale(1.05);
+}
+
+/* Next Button Active */
+#next-btn:active {
+  background-color: #185c18; /* Even darker green */
+}
+
+/* Reset Button */
+#reset-btn {
+  background-color:red; /* Red background */
+  color: white;
+  padding: 10px 12px; /* Same padding as next button */
+  font-size: 16px;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  display: none; /* Hide initially */
+  border: none;
+}
+
+/* Reset Button Hover */
+#reset-btn:hover {
+  background-color: #e64a19; /* Darker red */
+  transform: scale(1.05);
+}
+
+/* Reset Button Active */
+#reset-btn:active {
+  background-color: #d43f00; /* Even darker red */
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Style for correct and incorrect answers */
+.correct {
+  background-color: #228b22;
+}
+
+.incorrect {
+  background-color: red;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #answer-buttons {
+    grid-template-columns: 1fr; /* Stack buttons on smaller screens */
+  }
+}
